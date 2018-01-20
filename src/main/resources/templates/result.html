@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>result page</h1>
+<a href="/" method="get">new search</a>
+
+<p th:text="'in the folder ' + ${nameFolder} + ' is next files :'"/>
+
+<table>
+    <th:block th:each="list : ${lists}">
+        <tr>
+            <td th:text="${list}">...</td>
+        </tr>
+    </th:block>
+    <th:block th:each="col : ${column}">
+        <tr>
+            <td>Column:</td>
+            <th:block th:each="c : ${col}">
+                <td th:text="${c}">...</td>
+            </th:block>
+        </tr>
+    </th:block>
+    <th:block th:each="am : ${amount}">
+        <tr>
+            <td>Amount field in file -</td>
+            <td th:text="${am}">...</td>
+        </tr>
+    </th:block>
+</table>
+
+</body>
+</html>

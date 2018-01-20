@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Home page</h1>
+
+<!--<p th:text="'folder ' + ${nameFolder} + '!'"/>-->
+
+
+<form class="form-horizontal" method="post" action="/">
+    <label name="nameFolder">Please, input name folder for search</label>
+    <input type="text" th:value="${nameFolder}" id="nameFolder" name="nameFolder"/>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+<div>Help: name input folder - folderWithFiles3</div>
+
+</body>
+</html>
